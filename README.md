@@ -1,7 +1,7 @@
 <h1 align="center">Shalom Hunukumbura</h1>
 
 <p align="center">
-  Full-Stack Software Engineer &nbsp;·&nbsp; Python · FastAPI · Next.js · TypeScript · LLM Applications
+  Full Stack Developer &nbsp;·&nbsp; Python · FastAPI · Next.js · TypeScript · LLM Applications
   <br />
   Malabe, Sri Lanka
 </p>
@@ -20,7 +20,7 @@ Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-s
 
 **At work, so far**
 
-- 460+ commits and 45+ merged pull requests on a six-engineer team, around 20% of releases
+- 540+ commits and 240+ merged pull requests on a six-engineer team since February 2025
 - Contributed to 140+ REST endpoints across FastAPI and Flask services on PostgreSQL
 - Own features across 12 services, from schema to release: invoicing, payments, promotions, incorporation
 - Wrote 46 Alembic migrations and maintain 8 GitHub Actions workflows, including automated migration checks
@@ -61,6 +61,8 @@ Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-s
 <img src="https://img.shields.io/badge/RAG-1f2328?style=flat-square" alt="RAG" />
 <img src="https://img.shields.io/badge/LLM_Integration-1f2328?style=flat-square" alt="LLM Integration" />
 <img src="https://img.shields.io/badge/Embeddings_&_Vector_Search-1f2328?style=flat-square" alt="Embeddings and vector search" />
+<img src="https://img.shields.io/badge/FAISS-1f2328?style=flat-square" alt="FAISS" />
+<img src="https://img.shields.io/badge/Hybrid_Search_(BM25)-1f2328?style=flat-square" alt="Hybrid search (BM25)" />
 <img src="https://img.shields.io/badge/scikit--learn-1f2328?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
 
 **Infrastructure**
@@ -74,11 +76,12 @@ Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-s
 
 | Project | What it does | Built with |
 | --- | --- | --- |
+| [**alembic-guard**](https://github.com/ShalomHunukumbura/alembic-guard) | Linter and GitHub Action that catches Alembic migrations likely to lock Postgres tables or break running code, before they reach production. 10 rules with zero-downtime fixes, reads migrations via `ast` without running them. [On PyPI](https://pypi.org/project/alembic-guard/), [demo PR](https://github.com/ShalomHunukumbura/alembic-guard-demo/pulls). | Python, AST, Alembic, PostgreSQL |
+| [**DocSage**](https://github.com/ShalomHunukumbura/docsage) | RAG from first principles, no LangChain. Answers questions over 37 engineering documents with citations and refuses off-topic ones. Hybrid retrieval (FAISS + BM25 with reciprocal rank fusion) gets the right document first for 93% of questions vs 86% for either alone, on a 54-question eval set. | Python, FAISS, BM25, FastAPI, Docker |
 | [**Actify**](https://github.com/ShalomHunukumbura/actify) | Turns unstructured meeting notes into assignable action items with Gemini, then tracks, filters and exports them. JWT auth, per-user ownership, layered architecture. | React 19, TypeScript, Express, SQLite |
 | [**Customer Churn Prediction**](https://github.com/ShalomHunukumbura/customer-churn-prediction) | End-to-end churn pipeline: feature engineering, training, threshold tuning on churn-focused metrics, versioned model artifacts, and a FastAPI service for single and batch inference. | Python, scikit-learn, FastAPI |
 | [**Vehicle Management System**](https://github.com/ShalomHunukumbura/vms) | Inventory platform with role-based access, filtered search, multi-image upload and LLM-generated listings. 96 tests. | TypeScript, JWT, OpenAI API |
 | [**WhizChat**](https://github.com/ShalomHunukumbura/whizchat) | Real-time messaging over WebSockets with reactions, typing indicators and media sharing. | MERN, WebSockets, Tailwind |
-| [**File Organizer**](https://github.com/ShalomHunukumbura/file-organizer) | Installable CLI for rule-based file organization with dry-run mode and collision handling. | Python, argparse, pathlib |
 
 ## Background
 
