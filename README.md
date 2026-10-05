@@ -18,6 +18,8 @@ I build production software for business, taxation and compliance, end to end: d
 
 Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-service platform that handles taxation, accounting, company incorporation and compliance workflows. Before that I worked on **Neurux**, a domain-specific AI assistant for finance and compliance built on retrieval-augmented generation.
 
+**Building in public**: one shipped project a week, in my own domain (tax, payments, migrations, search). Four packages on PyPI, an MCP server on the official registry, and a live product.
+
 **At work, so far**
 
 - 540+ commits and 240+ merged pull requests on a six-engineer team since February 2025
@@ -63,6 +65,7 @@ Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-s
 <img src="https://img.shields.io/badge/Embeddings_&_Vector_Search-1f2328?style=flat-square" alt="Embeddings and vector search" />
 <img src="https://img.shields.io/badge/FAISS-1f2328?style=flat-square" alt="FAISS" />
 <img src="https://img.shields.io/badge/Hybrid_Search_(BM25)-1f2328?style=flat-square" alt="Hybrid search (BM25)" />
+<img src="https://img.shields.io/badge/MCP_Servers-1f2328?style=flat-square" alt="MCP servers" />
 <img src="https://img.shields.io/badge/scikit--learn-1f2328?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
 
 **Infrastructure**
@@ -71,17 +74,21 @@ Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-s
 <img src="https://img.shields.io/badge/GitHub_Actions-1f2328?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
 <img src="https://img.shields.io/badge/Linux-1f2328?style=flat-square&logo=linux&logoColor=white" alt="Linux" />
 <img src="https://img.shields.io/badge/Alembic-1f2328?style=flat-square" alt="Alembic" />
+<img src="https://img.shields.io/badge/Vercel-1f2328?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+<img src="https://img.shields.io/badge/Docker-1f2328?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 
 ## Selected work
 
 | Project | What it does | Built with |
 | --- | --- | --- |
-| [**alembic-guard**](https://github.com/ShalomHunukumbura/alembic-guard) | Linter and GitHub Action that catches Alembic migrations likely to lock Postgres tables or break running code, before they reach production. 10 rules with zero-downtime fixes, reads migrations via `ast` without running them. [On PyPI](https://pypi.org/project/alembic-guard/), [demo PR](https://github.com/ShalomHunukumbura/alembic-guard-demo/pulls). | Python, AST, Alembic, PostgreSQL |
+| [**Unlisted**](https://github.com/ShalomHunukumbura/unlisted) | Jobs that never make it to job boards: every role on 7,700+ Greenhouse, Ashby and Lever career pages, synced daily, past two weeks only (~40,000 of 227,000). Checks where "remote" roles can really be done from, with a filter for Sri Lanka. **[Live](https://unlisted-tau.vercel.app)** | Next.js 16, Python, PostgreSQL (Neon), GitHub Actions, Vercel |
+| [**lk-tax**](https://github.com/ShalomHunukumbura/lk-tax) | Sri Lankan tax engine (APIT, income tax, WHT, VAT, SSCL) with rules stored as dated data citing Inland Revenue sources. Verified against all 75,590 rows of the official salary tax tables. **[Live calculator](https://shalomhunukumbura.github.io/lk-tax/)**, [PyPI](https://pypi.org/project/lk-tax/) | Python, Decimal, FastAPI, Pyodide |
+| [**lk-tax-mcp**](https://github.com/ShalomHunukumbura/lk-tax-mcp) | MCP server that gives AI assistants like Claude 9 exact, sourced Sri Lankan tax tools instead of recalled rates. Listed on the official MCP Registry. [PyPI](https://pypi.org/project/lk-tax-mcp/) | Python, MCP SDK |
+| [**payhere-sim**](https://github.com/ShalomHunukumbura/payhere-sim) | Tests PayHere payment integrations on localhost: correctly signed notifications, 10 safety checks (forged, underpaid, duplicate, late, simultaneous) and a local checkout that explains hash errors. Caught a race giving 500 credits for one payment. [PyPI](https://pypi.org/project/payhere-sim/) | Python (stdlib only) |
+| [**alembic-guard**](https://github.com/ShalomHunukumbura/alembic-guard) | Linter and GitHub Action that catches Alembic migrations likely to lock Postgres tables or break running code, before they reach production. 10 rules with zero-downtime fixes, reads migrations via `ast` without running them. [PyPI](https://pypi.org/project/alembic-guard/), [Marketplace](https://github.com/marketplace/actions/alembic-guard), [demo PR](https://github.com/ShalomHunukumbura/alembic-guard-demo/pulls) | Python, AST, Alembic, PostgreSQL |
 | [**DocSage**](https://github.com/ShalomHunukumbura/docsage) | RAG from first principles, no LangChain. Answers questions over 37 engineering documents with citations and refuses off-topic ones. Hybrid retrieval (FAISS + BM25 with reciprocal rank fusion) gets the right document first for 93% of questions vs 86% for either alone, on a 54-question eval set. | Python, FAISS, BM25, FastAPI, Docker |
-| [**Actify**](https://github.com/ShalomHunukumbura/actify) | Turns unstructured meeting notes into assignable action items with Gemini, then tracks, filters and exports them. JWT auth, per-user ownership, layered architecture. | React 19, TypeScript, Express, SQLite |
-| [**Customer Churn Prediction**](https://github.com/ShalomHunukumbura/customer-churn-prediction) | End-to-end churn pipeline: feature engineering, training, threshold tuning on churn-focused metrics, versioned model artifacts, and a FastAPI service for single and batch inference. | Python, scikit-learn, FastAPI |
-| [**Vehicle Management System**](https://github.com/ShalomHunukumbura/vms) | Inventory platform with role-based access, filtered search, multi-image upload and LLM-generated listings. 96 tests. | TypeScript, JWT, OpenAI API |
-| [**WhizChat**](https://github.com/ShalomHunukumbura/whizchat) | Real-time messaging over WebSockets with reactions, typing indicators and media sharing. | MERN, WebSockets, Tailwind |
+
+Earlier: [Actify](https://github.com/ShalomHunukumbura/actify) (meeting notes to action items with Gemini), [Customer Churn Prediction](https://github.com/ShalomHunukumbura/customer-churn-prediction) (ML pipeline + FastAPI), [Vehicle Management System](https://github.com/ShalomHunukumbura/vms) (96 tests), [WhizChat](https://github.com/ShalomHunukumbura/whizchat) (real-time chat over WebSockets).
 
 ## Background
 
