@@ -77,6 +77,21 @@ Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-s
 <img src="https://img.shields.io/badge/Vercel-1f2328?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
 <img src="https://img.shields.io/badge/Docker-1f2328?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 
+## Developer tools
+
+<!-- tools:start -->
+Open-source tools that catch what code review misses. **[All of them, with real output](https://shalomhunukumbura.github.io/tools/)**
+
+| Tool | What it does | Install |
+| --- | --- | --- |
+| [**deprecation-radar**](https://github.com/ShalomHunukumbura/deprecation-radar)<br><sub>pytest plugin</sub> | See every deprecation your code depends on, grouped by library, before the upgrade breaks it. | `pip install pytest-deprecation-radar` |
+| [**log-leak**](https://github.com/ShalomHunukumbura/log-leak)<br><sub>pytest plugin</sub> | Fail your test run when personal data or secrets show up in your logs. | `pip install pytest-log-leak` |
+| [**payhere-sim**](https://github.com/ShalomHunukumbura/payhere-sim)<br><sub>CLI</sub> | Test your PayHere integration on your own machine, including the duplicate and late notifications that cost money. | `pipx install payhere-sim` |
+| [**alembic-guard**](https://github.com/ShalomHunukumbura/alembic-guard)<br><sub>CLI and GitHub Action</sub> | Catch Alembic migrations that lock tables or break running code, before they reach production. | `pip install alembic-guard` |
+
+Next up: ragcheck (built, release pending), env-check, dev-doctor, pr-deps.
+<!-- tools:end -->
+
 ## Selected work
 
 | Project | What it does | Built with |
