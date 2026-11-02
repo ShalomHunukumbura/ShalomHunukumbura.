@@ -18,7 +18,7 @@ I build production software for business, taxation and compliance, end to end: d
 
 Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-service platform that handles taxation, accounting, company incorporation and compliance workflows. Before that I worked on **Neurux**, a domain-specific AI assistant for finance and compliance built on retrieval-augmented generation.
 
-**Building in public**: one shipped project a week, in my own domain (tax, payments, migrations, search). Four packages on PyPI, an MCP server on the official registry, and a live product.
+**Building in public**: one shipped project a week, in my own domain (tax, payments, migrations, search). Six packages on PyPI, an MCP server on the official registry, a live product, and four data pipelines that update themselves every day.
 
 **At work, so far**
 
@@ -101,6 +101,17 @@ Next up: env-check, dev-doctor, pr-deps.
 | [**lk-tax**](https://github.com/ShalomHunukumbura/lk-tax) | Sri Lankan tax engine (APIT, income tax, WHT, VAT, SSCL) with rules stored as dated data citing Inland Revenue sources. Verified against all 75,590 rows of the official salary tax tables. **[Live calculator](https://shalomhunukumbura.github.io/lk-tax/)**, [PyPI](https://pypi.org/project/lk-tax/) | Python, Decimal, FastAPI, Pyodide |
 | [**lk-tax-mcp**](https://github.com/ShalomHunukumbura/lk-tax-mcp) | MCP server that gives AI assistants like Claude 9 exact, sourced Sri Lankan tax tools instead of recalled rates. Listed on the official MCP Registry. [PyPI](https://pypi.org/project/lk-tax-mcp/) | Python, MCP SDK |
 | [**DocSage**](https://github.com/ShalomHunukumbura/docsage) | RAG from first principles, no LangChain. Answers questions over 37 engineering documents with citations and refuses off-topic ones. Hybrid retrieval (FAISS + BM25 with reciprocal rank fusion) gets the right document first for 93% of questions vs 86% for either alone, on a 54-question eval set. | Python, FAISS, BM25, FastAPI, Docker |
+
+## Data pipelines
+
+Public Sri Lankan data that's locked in PDFs, web forms and short-lived listings, turned into clean tables and pages anyone can use. Each runs on a schedule, checks its own data, and republishes.
+
+| Project | What it does | Built with |
+| --- | --- | --- |
+| [**lk-prices**](https://github.com/ShalomHunukumbura/lk-prices) | Ten years of the Central Bank's daily food price reports (about 2,450 PDFs, three layouts) parsed into Delta Lake tables and a monthly food price index. Its 2021 to 2022 rise of 88% lands between the official NCPI and CCPI food inflation figures. Price your own shopping basket in any year since 2016. **[Live](https://shalomhunukumbura.github.io/lk-prices/)** | Python, Polars, Delta Lake, pdfplumber, systemd timers, GitHub Pages |
+| [**lkr-rates**](https://github.com/ShalomHunukumbura/lkr-rates) | Every Central Bank exchange rate since May 2010 (54 currencies and gold, about 250,000 rates) scraped from a web form into CSV, Parquet and JSON, with obviously wrong published rates quarantined. **[Live](https://shalomhunukumbura.github.io/lkr-rates/)** | Python, DuckDB, Parquet, GitHub Pages |
+| [**hiring-warehouse**](https://github.com/ShalomHunukumbura/hiring-warehouse) | A dbt star schema over Unlisted's job postings, which are deleted after 14 days: daily extracts keep the history, with type 2 job history rebuilt from scratch on every run, and a page of which skills new postings ask for. **[Live](https://shalomhunukumbura.github.io/hiring-warehouse/)** | dbt, DuckDB, PostgreSQL, GitHub Actions |
+| [**rain-watch**](https://github.com/ShalomHunukumbura/rain-watch) | Is it unusually wet in your district? Compares the last 7 days of rain in all 25 districts with the same week since 2015, adds the forecast, and sends a phone alert for heavy rain. **[Live](https://shalomhunukumbura.github.io/rain-watch/)** | Apache Airflow, S3 (SeaweedFS), DuckDB, Docker Compose |
 
 Earlier: [Actify](https://github.com/ShalomHunukumbura/actify) (meeting notes to action items with Gemini), [Customer Churn Prediction](https://github.com/ShalomHunukumbura/customer-churn-prediction) (ML pipeline + FastAPI), [Vehicle Management System](https://github.com/ShalomHunukumbura/vms) (96 tests), [WhizChat](https://github.com/ShalomHunukumbura/whizchat) (real-time chat over WebSockets).
 
