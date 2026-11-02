@@ -18,7 +18,7 @@ I build production software for business, taxation and compliance, end to end: d
 
 Currently a Software Engineer at **Xaventra**, working on **BizAdvisor**, a 15-service platform that handles taxation, accounting, company incorporation and compliance workflows. Before that I worked on **Neurux**, a domain-specific AI assistant for finance and compliance built on retrieval-augmented generation.
 
-**Building in public**: one shipped project a week, in my own domain (tax, payments, migrations, search). Six packages on PyPI, an MCP server on the official registry, a live product, and four data pipelines that update themselves every day.
+**Building in public**: one shipped project a week, in my own domain (tax, payments, migrations, search). Seven packages on PyPI, an MCP server on the official registry, a live product, and four data pipelines that update themselves every day.
 
 **At work, so far**
 
