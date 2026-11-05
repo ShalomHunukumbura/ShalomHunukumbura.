@@ -84,13 +84,14 @@ Open-source tools that catch what code review misses. **[All of them, with real 
 
 | Tool | What it does | Install |
 | --- | --- | --- |
+| [**no-hang**](https://github.com/ShalomHunukumbura/no-hang)<br><sub>CLI and GitHub Action</sub> | Find network, database and process calls that can wait forever, before one takes your site down. | `uses: ShalomHunukumbura/no-hang@v0.1.0` |
 | [**deprecation-radar**](https://github.com/ShalomHunukumbura/deprecation-radar)<br><sub>pytest plugin</sub> | See every deprecation your code depends on, grouped by library, before the upgrade breaks it. | `pip install pytest-deprecation-radar` |
 | [**log-leak**](https://github.com/ShalomHunukumbura/log-leak)<br><sub>pytest plugin</sub> | Fail your test run when personal data or secrets show up in your logs. | `pip install pytest-log-leak` |
 | [**ragcheck**](https://github.com/ShalomHunukumbura/ragcheck)<br><sub>CLI and GitHub Action</sub> | Catch RAG regressions in pull requests, when the right answer or the right document stops coming back. | `pip install ragcheck-ci` |
 | [**payhere-sim**](https://github.com/ShalomHunukumbura/payhere-sim)<br><sub>CLI</sub> | Test your PayHere integration on your own machine, including the duplicate and late notifications that cost money. | `pipx install payhere-sim` |
 | [**alembic-guard**](https://github.com/ShalomHunukumbura/alembic-guard)<br><sub>CLI and GitHub Action</sub> | Catch Alembic migrations that lock tables or break running code, before they reach production. | `pip install alembic-guard` |
 
-Next up: env-check, dev-doctor, pr-deps.
+Next up: dev-doctor, pr-deps.
 <!-- tools:end -->
 
 ## Selected work
